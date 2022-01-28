@@ -1,0 +1,7 @@
+xkb_keymap {
+	xkb_keycodes  { include "evdev+aliases(qwerty)"	};
+	xkb_types     { include "complete"	};
+	xkb_compat    { include "complete+ledcaps(group_lock)"	};
+	xkb_symbols   { include "pc+us+us(colemak):2+inet(evdev)+swappers(swap_pg)+swappers(esc)+swappers(left)+swappers(ins_prtsc)+swappers(czech)"	};
+	xkb_geometry  { include "pc(pc104)"	};
+};

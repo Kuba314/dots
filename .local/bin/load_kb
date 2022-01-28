@@ -1,0 +1,21 @@
+
+# set kb repeat rate
+xset r rate 170 32
+
+# set default keyboard (main one)
+setxkbmap -option '' us,us ,colemak -option grp_led:caps -option grp:rwin_toggle -option swappers:czech
+
+# load config file into the new keyboard
+keychron_kb_ids="`xinput -list | grep keyboard | grep Keychron | awk -F'=' '{print $2}' | awk '{print $1}'`"
+if [ -n "$keychron_kb_ids" ]; then
+    for keychron_kb_id in $keychron_kb_ids
+    do
+        echo "Keychron ID: $keychron_kb_id"
+        output=`xkbcomp -i $keychron_kb_id -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY 2>&1`
+        exit_code=$?
+        [ $exit_code = 1 ] && echo "$output"
+    done
+    exit $exit_code
+else
+    2>&1 echo "Warning: Keychron keyboard not found"
+fi

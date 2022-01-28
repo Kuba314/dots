@@ -1,0 +1,36 @@
+// vim:ts=4:sw=4:et
+{
+    // tabbed split container with 1 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "marks": [],
+    "percent": 1,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "none",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "fullscreen_mode": 1,
+            "geometry": {
+               "height": 718,
+               "width": 1098,
+               "x": 91,
+               "y": 153
+            },
+            "marks": [],
+            "name": "black.png",
+            "percent": null,
+            "swallows": [
+               {
+               "class": "^feh$",
+               "instance": "^feh$",
+               "title": "^feh \\[1 of 1\\] - /home/jake/Pictures/wallpapers/black\\.png$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
