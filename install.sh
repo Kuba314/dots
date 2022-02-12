@@ -17,10 +17,11 @@ fi
 
 shopt -s dotglob
 
-mkdir -p $DEST/.config/{i3,X11} $DEST/.local/bin $DEST/Pictures/wallpapers $DEST/.xkb/{keymap,symbols}
+mkdir -p $DEST/.config/{i3,X11,dunst} $DEST/.local/bin $DEST/Pictures/wallpapers $DEST/.xkb/{keymap,symbols}
 
 cp -rL .config/i3/* $DEST/.config/i3
 cp -rL .config/X11/* $DEST/.config/X11
+cp -rL .config/dunst/* $DEST/.config/dunst
 cp .local/bin/load_kb $DEST/.local/bin/load_kb
 
 cp -rL .xkb/keymap/* $DEST/.xkb/keymap

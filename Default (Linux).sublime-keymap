@@ -1,0 +1,23 @@
+[
+    { "keys": ["alt+w"], "command": "toggle_comment", "args": { "block": false } },
+    { "keys": ["alt+shift+w"], "command": "toggle_comment", "args": { "block": true } },
+    { "keys": ["ctrl+k", "k"], "command": "sublime_linter_toggle_highlights" },
+    { "keys": ["alt+e"], "command": "toggle_bookmark" },
+    { "keys": ["ctrl+e"], "command": "next_bookmark" },
+    { "keys": ["ctrl+shift+e"], "command": "prev_bookmark" },
+    { "keys": ["alt+shift+e"], "command": "clear_bookmarks" },
+
+    { "keys": ["alt+`"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+
+    { "keys": ["ctrl+alt+c"], "command": "clang_format",
+        "context": [
+            {"key": "selector", "operator": "equal", "operand": "source.c++"},
+        ],
+    },
+    { "keys": ["ctrl+alt+c"], "command": "clang_format",
+        "context": [
+            {"key": "selector", "operator": "equal", "operand": "source.c"},
+        ],
+    },
+]
+
